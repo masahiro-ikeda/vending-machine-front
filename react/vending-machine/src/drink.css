@@ -1,0 +1,44 @@
+.drink {
+    background: #fff;
+    text-align: center;
+}
+
+.drink-img {
+    max-height: 200px;
+}
+
+p {
+    margin: 5px;
+}
+
+.purchase-button {
+    display: inline-block;
+    color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    background-color: orange;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px 40px;
+}
+
+.purchase-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.drink-price {
+    font-size: 20px;
+}
+
+.cold-bar {
+    color: white;
+    background-color: blue;
+    font-size: 20px;
+}
+
+.hot-bar {
+    color: white;
+    background-color: red;
+    font-size: 20px;
+}

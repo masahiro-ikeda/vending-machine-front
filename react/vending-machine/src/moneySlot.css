@@ -1,0 +1,10 @@
+.moneySlot {
+    height: 80px;
+    border-radius: 10px;
+}
+
+.moneyButton img {
+    height: 100px;
+    cursor: pointer;
+    margin: 10px;
+}

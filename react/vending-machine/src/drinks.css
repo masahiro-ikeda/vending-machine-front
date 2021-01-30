@@ -1,0 +1,11 @@
+#drink-container {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.drink-list {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5, 200px);
+}
