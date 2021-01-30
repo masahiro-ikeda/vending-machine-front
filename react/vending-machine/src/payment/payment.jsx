@@ -1,12 +1,16 @@
 import React from 'react'
 import Axios from 'axios'
-import PaymentAmount from './paymentAmount'
+import PaymentAmount from './payment-amount'
 import Repayment from './repayment'
-import MoneySlot from './moneySlot'
+import MoneySlot from './money-slot'
+import ChangeModal from './change-modal'
 
 const Payment = (props) => {
 
-    // お金を入れる
+    const [repayments, setRepayments] = React.useState([]);
+    const [isModalOpen, setIsOpen] = React.useState(false);
+
+    // お金を入れる処理
     const pay = (money) => {
         Axios
             .post('http://localhost:8080/api/pay', {
@@ -20,11 +24,17 @@ const Payment = (props) => {
             })
     }
 
-    // 返金
+    // 返金処理
     const repay = () => {
         Axios
             .post('http://localhost:8080/api/repay')
             .then((result) => {
+                const repayments = result.data.repayments;
+                if (repayments.length === 0) {
+                    return;
+                }
+                setRepayments(repayments);
+                setIsOpen(true);
                 props.initialize();
             })
             .catch((error) => {
@@ -43,6 +53,11 @@ const Payment = (props) => {
                 />
                 <MoneySlot
                     pay={(money) => pay(money)}
+                />
+                <ChangeModal
+                    isModalOpen={isModalOpen}
+                    setIsOpen={(bool) => setIsOpen(bool)}
+                    changes={repayments}
                 />
             </div>
         </div>

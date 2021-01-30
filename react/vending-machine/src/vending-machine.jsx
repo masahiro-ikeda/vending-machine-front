@@ -1,9 +1,10 @@
 import React from 'react'
 import Axios from 'axios'
-import Drinks from './drinks'
-import Payment from './payment'
+import Drinks from './drink/drinks'
+import Payment from './payment/payment'
 import './vending-machine.css'
 
+// 自動販売機
 export default class VendingMachine extends React.Component {
 
   // コンストラクタ
@@ -68,6 +69,5 @@ export default class VendingMachine extends React.Component {
       </div>
     )
   }
-
 
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import './paymentAmount.css'
+import './payment-amount.css'
 
 // 投入金額を表示させる
 const PaymentAmount = (props) => {

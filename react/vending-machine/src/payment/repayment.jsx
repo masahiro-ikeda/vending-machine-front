@@ -4,8 +4,8 @@ import './repayment.css'
 // 返金レバー
 const Repayment = (props) => {
 
-    return(
-        <img class="repayment" src="./repayment.png" alt="" onClick={props.repay}/>
+    return (
+        <img class="repayment" src="./repayment.png" alt="" onClick={props.repay} />
     )
 }
 
