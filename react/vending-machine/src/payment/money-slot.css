@@ -3,8 +3,18 @@
     border-radius: 10px;
 }
 
-.moneyButton img {
+.moneyButton input {
     height: 100px;
-    cursor: pointer;
     margin: 10px;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.moneyButton input:hover {
+    background-color: #79acdf;
+}
+
+.moneyButton input:active {
+    background-color: #69c;
 }

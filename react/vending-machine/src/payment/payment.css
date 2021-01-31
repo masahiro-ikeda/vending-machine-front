@@ -1,0 +1,5 @@
+.payment-component {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 170px 110px 100px;
+}

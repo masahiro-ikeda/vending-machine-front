@@ -4,6 +4,7 @@ import PaymentAmount from './payment-amount'
 import Repayment from './repayment'
 import MoneySlot from './money-slot'
 import ChangeModal from './change-modal'
+import './payment.css'
 
 const Payment = (props) => {
 
@@ -43,8 +44,8 @@ const Payment = (props) => {
     }
 
     return (
-        <div>
-            <div id="payment-container">
+        <div id="payment-container">
+            <div class="payment-component">
                 <PaymentAmount
                     paymentAmount={props.paymentAmount}
                 />
@@ -54,12 +55,12 @@ const Payment = (props) => {
                 <MoneySlot
                     pay={(money) => pay(money)}
                 />
-                <ChangeModal
-                    isModalOpen={isModalOpen}
-                    setIsOpen={(bool) => setIsOpen(bool)}
-                    changes={repayments}
-                />
             </div>
+            <ChangeModal
+                isModalOpen={isModalOpen}
+                setIsOpen={(bool) => setIsOpen(bool)}
+                changes={repayments}
+            />
         </div>
     )
 

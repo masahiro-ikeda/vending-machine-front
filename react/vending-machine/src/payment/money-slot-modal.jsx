@@ -24,7 +24,7 @@ const MoneySlotModal = (props) => {
         >
             <div class="moneyButton">
                 {props.useableMoney.map(money => {
-                    return <img src={`./${money}yen.png`} alt="" onClick={() => props.pay(money)}></img>
+                    return <input type="image" src={`./${money}yen.png`} alt="" onClick={() => props.pay(money)}/>
                 })}
             </div>
             <button onClick={() => props.setIsOpen(false)} >閉じる</button>

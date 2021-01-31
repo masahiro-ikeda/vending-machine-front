@@ -17,8 +17,10 @@ const Drink = (props) => {
                 drinkId: props.drinkId
             })
             .then((result) => {
-                setChanges(result.data.changes);
-                setIsChangeModalOpen(true);
+                if (result.data.changes.length > 0) {
+                    setChanges(result.data.changes);
+                    setIsChangeModalOpen(true);
+                }
                 setIsPurchaseModalOpen(true);
                 props.initialize();
             })
